@@ -8,6 +8,8 @@ app.get('/', function(request,response){
  response.sendFile(__dirname + '/public/index.html')
 })
 
+
+
 webSocketer.on('connection', function(socket){
  console.log('a user has connected')
 socket.on('color', function(data){

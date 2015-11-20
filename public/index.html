@@ -12,8 +12,11 @@
   <script>
   socket = io();
   socket.emit('color', 'red')
-
+  //listen for server message
   socket.on('server-message', function(data){console.log('Server says... ' + data)})
+
+  //listen for sever message of type color
+  socket.on('color', function(data){console.log('Server says... ' + data)})
   </script>
 
   </body>
