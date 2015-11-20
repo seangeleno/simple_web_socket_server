@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+<h1 style="text-align:center;color:rebeccapurple">Welcome to my socket boom boom pow</h1>
+  <script type="text/javascript" src ="/socket.io/socket.io.js"></script>
+
+  <script>
+  socket = io();
+  socket.emit('color', 'red')
+
+  socket.on('server-message', function(data){console.log('Server says... ' + data)})
+  </script>
+
+  </body>
+</html>

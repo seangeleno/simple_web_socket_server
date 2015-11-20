@@ -1,0 +1,17 @@
+{
+  "name": "simple_websockets_server",
+  "version": "1.0.0",
+  "description": "jimmito's simple web socket class",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3",
+    "http": "0.0.0",
+    "http-server": "^0.8.5",
+    "socket.io": "^1.3.7"
+  }
+}
