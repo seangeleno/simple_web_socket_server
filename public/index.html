@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+ <head>
+   <meta charset="utf-8">
+   <script src="/socket.io/socket.io.js"></script>
 
-<h1 style="text-align:center;color:rebeccapurple">Welcome to my socket boom boom pow</h1>
-  <script type="text/javascript" src ="/socket.io/socket.io.js"></script>
+   <script>
+   socket = io();
+   socket.emit('color', 'red');
 
-  <script>
-  socket = io();
-  socket.emit('color', 'red')
-  //listen for server message
-  socket.on('server-message', function(data){console.log('Server says... ' + data)})
+   //listen for server message
+   socket.on('server-message', function(data){
+     console.log('server says...', data);
+   });
 
-  //listen for sever message of type color
-  socket.on('color', function(data){console.log('Server says... ' + data)})
-  </script>
+   socket.on('color', function(data){
+     console.log('server says...' , data)
+     var myHotBody = document.querySelector('body');
+     myHotBody.style.backgroundColor = data
+   });
+   </script>
 
-  </body>
+   <title></title>
+ </head>
+ <body>
+<h1> welcome to the future, sockets </h1>
+
+ </body>
 </html>
